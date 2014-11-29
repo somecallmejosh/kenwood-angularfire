@@ -5,6 +5,8 @@
     <title ng-bind="constant.siteName"></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <!-- To allow for crawling of the site: -->
+    <meta name="fragment" content="!" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -39,12 +41,12 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a ng-href="#">HOME</a></li>
-              <li><a href="#/about">ABOUT</a></li>
-              <li><a href="#/schedule">SCHEDULE</a></li>
-              <li><a href="#/lessons">LESSONS</a></li>
-              <li><a href="#/media">MEDIA</a></li>
-              <li><a href="#/shop">SHOP</a></li>
+              <li ng-class=" {active: $location.path() === '/'} "><a ng-href="#">HOME</a></li>
+              <li ng-class=" {active: $location.path() === '/about'} "><a href="#/about">ABOUT</a></li>
+              <li ng-class=" {active: $location.path() === '/schedule'} "><a href="#/schedule">SCHEDULE</a></li>
+              <li ng-class=" {active: $location.path() === '/lessons'} "><a href="#/lessons">LESSONS</a></li>
+              <li ng-class=" {active: $location.path() === '/media'} "><a href="#/media">MEDIA</a></li>
+              <li ng-class=" {active: $location.path() === '/shop'} "><a href="#/shop">SHOP</a></li>
             </ul>
           </div>
         </div>
