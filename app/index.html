@@ -33,11 +33,11 @@
               <span class="icon-bar"></span>
             </button>
             <a href="#/" class="navbar-brand">{{constant.siteName}}</a>
-            <p ng-show-auth class="navbar-text">
+            <div ng-show-auth class="navbar-text">
               You are logged in.
               <a href="#/site-admin" class="btn btn-primary btn-xs">Go To Admin</a>
               <a href="#/account" class="btn btn-success btn-xs">Go to Logout Screen</a>
-            </p>
+            </div>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -143,6 +143,7 @@
         <script src="scripts/controllers/videoadmin.js"></script>
         <script src="scripts/controllers/videodisplay.js"></script>
         <script src="scripts/controllers/lessons.js"></script>
+        <script src="scripts/directives/focus.js"></script>
         <!-- endbuild -->
 </body>
 </html>
