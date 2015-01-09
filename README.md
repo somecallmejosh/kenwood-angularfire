@@ -7,4 +7,4 @@ Web app for my drum instructor Kenwood Dennard. Utilizes the following features:
 * AngularJS
 * Bootstrap
 
-[Adding Sub Folder to gh-pages](https://github.com/LeaVerou/prism/issues/231)
+[Adding Sub Folder to gh-pages](https://gist.github.com/cobyism/4730490)
