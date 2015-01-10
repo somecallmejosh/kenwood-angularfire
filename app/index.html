@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title ng-bind="constant.siteName"></title>
-    <meta name="description" content="">
+    <meta name="description" content="{{constant.siteDescription}}">
     <meta name="viewport" content="width=device-width">
     <!-- To allow for crawling of the site: -->
     <meta name="fragment" content="!" />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
@@ -18,10 +17,6 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <!-- Add your site or application content here -->
     <div class="header clearfix">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -67,7 +62,7 @@
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', '{{constant.analyticsUA}}');
+       ga('create', 'UA-57622338-1');
        ga('send', 'pageview');
     </script>
 
