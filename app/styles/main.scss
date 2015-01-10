@@ -165,4 +165,12 @@ input[type="date"], input[type="password"], textarea {
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 760px) {
   .cols-2 {columns: 1;}
+  .navbar-default {
+    .navbar-brand {
+      font-size: 18px;
+    }
+  }
+  .newsletter, .teasers > div {
+    margin-bottom: 1.5em;
+  }
 }

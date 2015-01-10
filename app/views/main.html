@@ -14,13 +14,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-5">
+    <div class="col-sm-5 newsletter">
       <h1 contenteditable ng-model="content.calloutHeadline" ></h1>
       <p class="lead" contenteditable ng-model="content.calloutContent" ></p>
       <a href="#" class="btn btn-primary btn-lg" >Sign Up Now</a>
     </div>
     <div class="col-sm-6 col-md-offset-1">
-      <!-- <h1 contenteditable ng-model="content.videoTitle"></h1> -->
       <div class="embed-responsive embed-responsive-16by9" >
         <div ng-bind-html="content.videoContent | unsafe"></div>
       </div>
