@@ -18,7 +18,7 @@ angular.module('kenwoodApp')
     $scope.addMessage = function(newMessage) {
       if( newMessage ) {
         // push a message to the end of the array
-        $scope.messages.$add({text: newMessage})
+        $scope.messages.$add(newMessage)
           // display any errors
           .catch(alert);
       }

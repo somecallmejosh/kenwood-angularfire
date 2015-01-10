@@ -44,9 +44,12 @@
     <div ng-view></div>
     <div class="footer">
       <p>&copy; 2014. {{constant.siteName}}. All rights reserved.<br>
-      <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:{{constant.primaryEmail}}">Email Kenwood</a> or call
-      <span class="glyphicon glyphicon-phone"></span> <a href="tel:{{constant.primaryPhone}}">{{constant.primaryPhone}}</a> for lessons<br>
-      <a ng-hide-auth="" href="#/login">Log In</a>
+        <a href="mailto:{{constant.primaryEmail}}"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+        <a href="tel:{{constant.primaryPhone}}" title="{{constant.primaryPhone}}"><span class="glyphicon glyphicon-phone"></span> {{constant.primaryPhone}}</a>
+        <a href="#/chat"><span class="glyphicon glyphicon-list-alt"></span> Message Board</a>
+      </p>
+      <p>
+        <a href="#/login">Login</a>
       </p>
     </div>
 
