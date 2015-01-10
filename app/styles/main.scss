@@ -11,22 +11,22 @@ $border-radius-small:       0px !default;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
 @font-face {
   font-family: 'Raleway';
+  src: url('fonts/Raleway-Regular.eot');
+  src: local('☺'), url('fonts/Raleway-Regular.woff') format('woff'), url('fonts/Raleway-Regular.ttf') format('truetype'), url('fonts/Raleway-Regular.svg') format('svg');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 300;
-  src: url(fonts/Raleway-Light.eot);
-  src: local('Raleway Light'), local('Raleway-Light'), url(/app/fonts/Raleway-Light.eot) format('embedded-opentype'), url(/app/fonts/Raleway-Light.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Raleway';
-  font-style: normal;
+  src: url('fonts/Raleway-Medium.eot');
+  src: local('☺'), url('fonts/Raleway-Medium.woff') format('woff'), url('fonts/Raleway-Medium.ttf') format('truetype'), url('fonts/Raleway-Medium.svg') format('svg');
   font-weight: 500;
-  src: url(fonts/Raleway-Medium.eot);
-  src: local('Raleway Medium'), local('Raleway-Medium'), url(/app/fonts/Raleway-Medium.eot) format('embedded-opentype'), url(/app/fonts/Raleway-Medium.woff) format('woff');
+  font-style: normal;
 }
-
 body {
   font-family: Raleway;
   font-size: 16px;
