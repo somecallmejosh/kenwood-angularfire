@@ -121,9 +121,9 @@ angular.module('kenwoodApp')
         templateUrl: 'views/lessons.html',
         controller: 'LessonsCtrl'
       })
-      .when('/lessons', {
-        templateUrl: 'views/lessons.html',
-        controller: 'LessonsCtrl'
+      .when('/newsletter', {
+        templateUrl: 'views/newsletter.html',
+        controller: 'NewsletterCtrl'
       })
       .otherwise({redirectTo: '/'});
   }])
