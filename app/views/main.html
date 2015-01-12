@@ -10,7 +10,11 @@
     </div>
     <div class="col-sm-8">
       <h1 contenteditable ng-model="content.teaser" strip-br="true"></h1>
-      <a href="#" class="btn btn-primary">More Info</a>
+      <a ng-href="{{content.teaserLink}}" class="btn btn-primary">More Info</a>
+      <div class="well" ng-show="isNotEditable">
+        <label for="teaserLink">Link location</label>
+        <input type="text" ng-model="content.teaserLink" class="form-control" id="teaserLink">
+      </div>
     </div>
   </div>
   <div class="row">
@@ -39,7 +43,7 @@
     <div class="row">
       <div class="col-sm-6">
         <h1 contenteditable ng-model="content.eventHeader"></h1>
-        <div ng-show="isNotEditable" class="alert alert-info">
+        <div ng-show-auth class="alert alert-info">
           To edit event items, go to the <a href="#/schedule-admin" class="btn btn-xs btn-success">schedule admin page</a>
         </div>
         <div ng-controller="ScheduledisplayCtrl">
