@@ -7,22 +7,25 @@
     <iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F91860075&amp;show_artwork=true">
       </iframe>
   </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <h2>Image Gallery</h2>
-      <div class="alert alert-info text-center" ng-show-auth>
-        To edit Image Gallery items, go to the <a href="#/image-admin" class="btn btn-success btn-xs">gallery admin</a>
+  <h2>Videos</h2>
+  <div class="alert alert-info text-center" ng-show-auth>
+    To edit Image Video items, go to the <a href="#/video-admin" class="btn btn-success btn-xs">video admin</a>
+  </div>
+  <div class="row video-gallery" ng-controller="VideodisplayCtrl">
+    <div  ng-repeat="item in items"  class="col-sm-6 gallery-item">
+      <div class="embed-responsive embed-responsive-16by9" >
+        <div ng-bind-html="item.videoLink | unsafe"></div>
       </div>
-
-      <p>Coming soon</p>
-    </div>
-    <div class="col-sm-6">
-      <h2>Videos</h2>
-      <div class="alert alert-info text-center" ng-show-auth>
-        To edit Image Video items, go to the <a href="#/video-admin" class="btn btn-success btn-xs">video admin</a>
-      </div>
-
-      <p>Coming soon</p>
     </div>
   </div>
+  <h2>Image Gallery</h2>
+  <div class="alert alert-info text-center" ng-show-auth>
+    To edit Image Gallery items, go to the <a href="#/image-admin" class="btn btn-success btn-xs">gallery admin</a>
+  </div>
+  <div class="row image-gallery" ng-controller="ImagedisplayCtrl">
+    <div ng-repeat="item in items" class="col-sm-4 gallery-item">
+      <img ng-src="{{item.imageLink}}" class="img-responsive"  alt="">
+    </div>
+  </div>
+
 </div>

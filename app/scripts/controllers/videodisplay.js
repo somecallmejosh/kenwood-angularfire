@@ -8,10 +8,6 @@
  * Controller of the kenwoodApp
  */
 angular.module('kenwoodApp')
-  .controller('VideodisplayCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('VideodisplayCtrl', function ($scope, fbutil) {
+    $scope.items = fbutil.syncArray('vids');
+});

@@ -1,1 +1,78 @@
-<p>This is the imageAdmin view.</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>Image Gallery Items</h1>
+      <p ng-show="noPicsMessage()">There are currently no images in your gallery.</p>
+    </div>
+    <div class="col-sm-6">
+      <add-item></add-item>
+    </div>
+  </div>
+  <form class="row well" name="form" novalidate ng-show="isNotEditable">
+    <div class="col-sm-12">
+      <h1>Add a new Image</h1>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="title">Image Title</label>
+        <input type="text" ng-model="newItem.title" class="form-control" id="title">
+      </div>
+      <div class="form-group">
+        <label for="description">Image Description</label>
+        <input type="text" name="description" ng-model="newItem.description" class="form-control" id="description">
+      </div>
+      <div class="form-group">
+        <label for="imageLink">Image Link (600 X 400)</label>
+        <input name="imageLink" ng-model="newItem.imageLink" class="form-control" id="imageLink">
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <button ng-disabled="form.$invalid" type="submit" class="btn btn-primary" ng-click="addItem(newItem);newItem = null;">Submit</button>
+    </div>
+  </form>
+  <div id="events" ng-show="items.length">
+    <div class="row">
+      <div class="col-md-12" ng-repeat="item in items">
+        <div ng-show="!editItem">
+          <div class="thumbnail">
+            <div class="caption">
+              <div class="row">
+                <div class="col-sm-3">
+                  <img ng-src="{{item.imageLink}}" alt="" class="img-responsive">
+                </div>
+                <div class="col-sm-7">
+                  <p class="lead">{{item.title}}</p>
+                  <p>{{item.description}}</p>
+                </div>
+                <div class="col-sm-2">
+                  <button class="btn btn-sm btn-primary pull-right" ng-click="editItem = !editItem">Edit this item</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-show="editItem">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3><strong>Editing:</strong> {{item.title}}</h3>
+              <div class="row">
+                <div class="col-sm-6">
+                  <img ng-src="{{item.imageLink}}" alt="" class="img-responsive">
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="form-group"><label for="title">Title</label><input class="form-control" type="text" ng-model="item.title" ng-blur="updateItem($index)"></div>
+                    <div class="form-group"><label for="description">Description</label><input class="form-control" type="text" ng-model="item.description" ng-blur="updateItem($index)"></div>
+                    <div class="form-group"><label for="imageLink">Image (600X400)</label><input class="form-control" type="text" ng-model="item.imageLink" ng-blur="updateItem($index)"></div>
+                  </div>
+                </div>
+              </div>
+              <edit-item></edit-item>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

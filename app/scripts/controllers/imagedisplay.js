@@ -8,10 +8,6 @@
  * Controller of the kenwoodApp
  */
 angular.module('kenwoodApp')
-  .controller('ImagedisplayCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ImagedisplayCtrl', function ($scope, fbutil) {
+    $scope.items = fbutil.syncArray('pics');
   });
