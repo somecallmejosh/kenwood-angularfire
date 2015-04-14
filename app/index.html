@@ -12,7 +12,7 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="header clearfix">
+    <div class="header clearfix" ng-cloak>
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -42,7 +42,7 @@
       </nav>
     </div>
     <div ng-view></div>
-    <div class="footer">
+    <div class="footer" ng-cloak>
       <p>&copy; 2014. {{constant.siteName}}. All rights reserved.<br>
         <a href="mailto:{{constant.primaryEmail}}"><span class="glyphicon glyphicon-envelope"></span> Email</a>
         <a href="tel:{{constant.primaryPhone}}" title="{{constant.primaryPhone}}"><span class="glyphicon glyphicon-phone"></span> {{constant.primaryPhone}}</a>
