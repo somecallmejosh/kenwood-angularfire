@@ -286,3 +286,15 @@ loading-bar,
 .gallery-item {
   margin-bottom: 20px;
 }
+
+.embed-responsive {
+  margin-bottom: 20px;
+}
+
+.embed-responsive:empty, .embed-responsive-16by9:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0;
+  margin-bottom: 0;
+}
+
