@@ -1,0 +1,25 @@
+<banner-image></banner-image>
+<div class="container">
+  <h1>Schedule of Events</h1>
+  <div ng-show-auth class="alert alert-info text-center">
+    To edit event items, go to the <a href="#/schedule-admin" class="btn btn-success btn-xs">schedule admin page</a>.
+  </div>
+  <div ng-controller="ScheduledisplayCtrl" class="row">
+    {{currentDate}}
+    <div class="col-sm-12" ng-show="noEventMessage()">
+      <p>There are currently no events scheduled.</p>
+    </div>
+    <div class="events">
+      <div ng-repeat="event in events" class="col-sm-4 event">
+        <div class="panel">
+          <img ng-src="{{event.eventImageLink}}" alt="" class="img-responsive">
+          <h2 ng-bind="event.title"></h2>
+          <h3>{{event.venuName}}</h3>
+          <h4>{{event.date | date:'MMM dd, yyyy'}} @ {{event.time}}</h4>
+          <p class="small">{{event.city}}, {{event.state}}</p>
+           <p><span class="glyphicon glyphicon-map-marker"></span><a target="_blank" href="https://www.google.com/maps/dir/{{event.streetAddress}}+{{event.city}}+{{event.state}}+{{event.zip}}">Directions</a></p>
+        </div>
+      </div></div>
+  </div>
+</div>
+<edit-content></edit-content>
