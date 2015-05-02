@@ -16,6 +16,8 @@ This project uses [grunt-build-control](https://github.com/robwierzbowski/grunt-
 ###Work Flow
 
 - In Master branch - make edits
+- Delete `dist` folder
+- Run `grunt build`
 - Add and commit edits
 - run `grunt buildcontrol:pages`
   - This will push the distrubtion folder to the appropriate branch
