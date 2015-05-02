@@ -40,12 +40,6 @@ module.exports = function (grunt) {
           remote: 'git@github.com:somecallmejosh/kenwood-angularfire.git',
           branch: 'gh-pages'
         }
-      },
-      local: {
-        options: {
-          remote: '../',
-          branch: 'build'
-        }
       }
     },
 
