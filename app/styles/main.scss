@@ -143,8 +143,17 @@ body {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .navbar-fixed-bottom {
+    display: none
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  body {
+    padding-bottom: 100px;
+  }
   .container {
     max-width: 960px;
   }

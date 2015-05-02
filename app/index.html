@@ -12,7 +12,13 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="header clearfix" ng-cloak>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <iframe 
+      width="100%" height="90" scrolling="yes" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F91860075">
+    </iframe>
+    </nav>
+    <div class="header clearfix" ng-cloak="">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -42,7 +48,7 @@
       </nav>
     </div>
     <div ng-view></div>
-    <div class="footer" ng-cloak>
+    <div class="footer" ng-cloak="">
       <p>&copy; 2015. {{constant.siteName}}. All rights reserved.<br>
         <a href="mailto:{{constant.primaryEmail}}"><span class="glyphicon glyphicon-envelope"></span> Email</a>
         <a href="tel:{{constant.primaryPhone}}" title="{{constant.primaryPhone}}"><span class="glyphicon glyphicon-phone"></span> {{constant.primaryPhone}}</a>
