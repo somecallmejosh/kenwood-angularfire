@@ -148,6 +148,9 @@ body {
   .container {
     max-width: 960px;
   }
+  .events .event:nth-child(4n) {
+    clear: left;
+  }
 }
 
 /* Responsive: Portrait tablets and up */
