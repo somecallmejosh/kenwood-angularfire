@@ -20,7 +20,7 @@
       src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F91860075">
     </iframe>
     </nav>
-    <div class="header clearfix" ng-cloak="">
+    <div class="header clearfix">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -30,8 +30,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="#/" class="navbar-brand">{{constant.siteName}}</a>
-            <div ng-show-auth class="navbar-text">
+            <a href="#/" class="navbar-brand" ng-bind="constant.siteName"></a>
+            <div ng-show-auth class="navbar-text" ng-cloak>
               <a href="#/site-admin" class="btn btn-primary btn-xs">Go To Admin</a>
               <a href="#/account" class="btn btn-success btn-xs">Go to Logout Screen</a>
             </div>
@@ -50,7 +50,7 @@
       </nav>
     </div>
     <div ng-view></div>
-    <div class="footer" ng-cloak="">
+    <div class="footer">
       <p>
         Share with your friends:
         
