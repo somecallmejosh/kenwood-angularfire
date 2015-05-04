@@ -121,6 +121,13 @@ angular.module('kenwoodApp')
         templateUrl: 'views/lessons.html',
         controller: 'LessonsCtrl'
       })
+      .when('/lesson/:itemId', {
+        templateUrl: 'views/lessonDetail.html',
+        controller: 'LessonDetailCtrl'
+
+      })
+
+
       .when('/newsletter', {
         templateUrl: 'views/newsletter.html',
         controller: 'NewsletterCtrl'

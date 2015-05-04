@@ -160,8 +160,11 @@ body {
   .container {
     max-width: 960px;
   }
-  .events .event:nth-child(4n) {
+  .events .event:nth-child(4n), .lessons .lesson:nth-child(4n) {
     clear: left;
+  }
+  .lesson .panel {
+    height: 250px;
   }
 }
 
