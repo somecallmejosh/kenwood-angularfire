@@ -10,7 +10,7 @@
       <p>There are currently no events scheduled.</p>
     </div>
     <div class="events">
-      <div ng-repeat="event in events" class="col-sm-4 event">
+      <div ng-repeat="event in events | orderBy:'-date'" class="col-sm-4 event">
         <div class="panel">
           <img ng-src="{{event.eventImageLink}}" alt="" class="img-responsive">
           <h2 ng-bind="event.title"></h2>

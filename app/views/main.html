@@ -48,7 +48,8 @@
         </div>
         <div ng-controller="ScheduledisplayCtrl">
           <p ng-show="noEventMessage()">There are currently no events scheduled.</p>
-          <div class="media" ng-repeat="event in events|limitTo:2">
+          <!-- <div class="media" ng-repeat="event in events|limitTo:2"> -->
+          <div class="media" ng-repeat="event in events | orderBy:'-date' | limitTo:2">
             <div class="media-body">
               <h5>{{event.date | date:'MMM, dd, yyyy'}}</strong></h5>
               <h4 class="media-heading" ng-bind="event.title"></h4>
