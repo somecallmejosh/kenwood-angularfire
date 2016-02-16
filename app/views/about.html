@@ -1,0 +1,45 @@
+<banner-image></banner-image>
+<div>
+  <div class="well">
+    <h3 contenteditable ng-model="content.headline" class="text-center"></h3>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 contenteditable ng-model="content.conentHeadline"></h1>
+      <div contenteditable ng-model="content.primaryContent" class="primary-content cols-2"></div>
+    </div>
+  </div>
+  <div class="row teasers">
+    <hr>
+    <div class="col-sm-4">
+      <img ng-src="{{content.teaser1_image}}" alt="" class="img-responsive">
+      <div class="well" ng-show="isNotEditable">
+        <label for="teaser_image">Image Link (600x400)</label>
+        <input type="text" ng-model="content.teaser1_image" class="form-control" id="teaser_image">
+      </div>
+      <h3 contenteditable ng-model="content.teaser1" ng-hide="isNotEditable"></h3>
+      <div contenteditable ng-model="content.teaser1_content" ng-hide="isNotEditable"></div>
+    </div>
+    <div class="col-sm-4">
+      <img ng-src="{{content.teaser2_image}}" alt="" class="img-responsive">
+      <div class="well" ng-show="isNotEditable">
+        <label for="teaser_image">Image Link (600x400)</label>
+        <input type="text" ng-model="content.teaser2_image" class="form-control" id="teaser_image">
+      </div>
+      <h3 contenteditable ng-model="content.teaser2" ng-hide="isNotEditable"></h3>
+      <div contenteditable ng-model="content.teaser2_content" ng-hide="isNotEditable"></div>
+    </div>
+    <div class="col-sm-4">
+      <img ng-src="{{content.teaser3_image}}" alt="" class="img-responsive">
+      <div class="well" ng-show="isNotEditable">
+        <label for="teaser_image">Image Link (600x400)</label>
+        <input type="text" ng-model="content.teaser3_image" class="form-control" id="teaser_image">
+      </div>
+      <h3 contenteditable ng-model="content.teaser3" ng-hide="isNotEditable"></h3>
+      <div contenteditable ng-model="content.teaser3_content" ng-hide="isNotEditable"></div>
+    </div>
+  </div>
+</div>
+<edit-content></edit-content>

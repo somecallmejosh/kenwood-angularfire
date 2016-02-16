@@ -1,0 +1,32 @@
+/**
+ * @ngdoc function
+ * @name kenwoodApp.directive:ngShowAuth
+ * @description
+ * # ngShowAuthDirective
+ * A directive that shows elements only when user is logged in. It also waits for simpleLogin
+ * to be initialized so there is no initial flashing of incorrect state.
+ */
+angular.module('kenwoodApp')
+  .directive('ngShowAuth', ['simpleLogin', '$timeout', function (simpleLogin, $timeout) {
+    'use strict';
+    var isLoggedIn;
+    simpleLogin.watch(function(user) {
+      isLoggedIn = !!user;
+    });
+
+    return {
+      restrict: 'A',
+      link: function(scope, el) {
+        el.addClass('ng-cloak'); // hide until we process it
+
+        function update() {
+          $timeout(function () {
+            el.toggleClass('ng-cloak', !isLoggedIn);
+          }, 0);
+        }
+
+        simpleLogin.watch(update, scope);
+        simpleLogin.getUser(update);
+      }
+    };
+  }]);
